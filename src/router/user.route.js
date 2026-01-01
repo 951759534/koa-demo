@@ -21,4 +21,6 @@ router.post('/login', userValidate, verifyLogin, login);
 router.patch('/changePassword', auth, verifyPassword, cryptPassword, changePassword);
 
 
+
+
 module.exports = router;

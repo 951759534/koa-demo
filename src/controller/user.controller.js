@@ -67,7 +67,7 @@ class UserController {
                     result: ''
                 }
             } else {
-                console.error('修改密码失败', err);
+                console.error('修改密码失败');
                 ctx.app.emit('error', changePasswordError, ctx);
             }
         } catch (err) {

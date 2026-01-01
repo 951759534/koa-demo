@@ -1,7 +1,7 @@
 const { TokenExpiredError } = require("jsonwebtoken");
 const { changePassword } = require("../controller/user.controller");
 
-module.exports = {  
+module.exports = {
     userFormatError: {
         code: '10001',
         message: '用户名或密码不能为空',
@@ -35,27 +35,66 @@ module.exports = {
     unAuthorization: {
         code: '10007',
         message: '未授权',
-        result: ''  
+        result: ''
     },
     nullPassword: {
         code: '10008',
         message: '密码不能为空',
         result: ''
     },
-    TokenExpiredError: {
-        code: '10101',
-        message: 'token已过期',
-        result: ''  
-    },
-    JsonWebTokenError: {
-        code: '10102',
-        message: '无效的token',
-        result: ''  
-    },  
     changePasswordError: {
         code: '10009',
         message: '修改密码失败',
         result: ''
-    }
-
+    },
+    TokenExpiredError: {
+        code: '10101',
+        message: 'token已过期',
+        result: ''
+    },
+    JsonWebTokenError: {
+        code: '10102',
+        message: '无效的token',
+        result: ''
+    },
+    hasNotAdminPermission: {
+        code: '10103',
+        message: '该用户无管理员权限',
+        result: ''
+    },
+    fileUploadError: {
+        code: '10201',
+        message: '图片上传失败',
+        result: ''
+    },
+    unSupportedImage: {
+        code: '10202',
+        message: '不支持的图片格式',
+        result: ''
+    },
+    goodsFormatError: {
+        code: '10203',
+        message: '商品参数格式错误',
+        result: ''
+    },
+    publishGoodsError: {
+        code: '10204',
+        message: '商品发布失败',
+        result: ''
+    },
+    invalidGoodsID: {
+        code: '10205',
+        message: '无效的商品ID',
+        result: ''
+    },
+    cartFormattError: {
+        code: '10301',
+        message: '购物车参数格式错误',
+        result: ''
+    },
+    cartUpdateError: {
+        code: '10302',
+        message: '购物车更新失败',
+        result: ''
+    },
 };  

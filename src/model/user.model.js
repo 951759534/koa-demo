@@ -10,17 +10,17 @@ const User = seq.define('sc_user', {
         comment: '用户名，唯一'
     },
     password: {
-        type: DataTypes.CHAR(64), 
+        type: DataTypes.CHAR(64),
         allowNull: false,
         comment: '密码'
     },
     is_admin: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,          
+        allowNull: false,
         defaultValue: 0,
         comment: '是否为管理员，0：不是，1：是'
-    }   
+    }
 });
 
-User.sync({ force: true });
+// User.sync({ force: true });
 module.exports = User;
